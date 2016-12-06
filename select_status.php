@@ -1,9 +1,12 @@
 <?php
 require_once 'include/DB_connect.php';
+
+// GET variables
 $index_no=$_GET['index_no'];
+
+// connection
 $sql = "SELECT * FROM status;";
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     // output data of each row
 $temp = $result->num_rows;
